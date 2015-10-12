@@ -1,3 +1,8 @@
+## set variables
+#
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_CACHE_HOME="$HOME/.cache"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/lance/.oh-my-zsh
 
