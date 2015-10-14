@@ -13,7 +13,9 @@ export ZSH=/home/lance/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="gallois"
 # ZSH_THEME="dieter"
-ZSH_THEME="aussiegeek"
+# ZSH_THEME="aussiegeek"
+# ZSH_THEME="junkfood"
+ZSH_THEME="lav"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -90,3 +92,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# From "How to set shell working directory after leaving vifm"
+vicd()
+{
+	local vifmpath="$(command vifm --choose-dir -)"
+	if [ -z "$vifmpath" ]; then
+		echo 'Directory picking cancelled/failed'
+		return 1
+	fi
+	cd "$vifmpath"
+}
+
